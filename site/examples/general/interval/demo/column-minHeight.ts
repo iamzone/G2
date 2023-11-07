@@ -1,6 +1,7 @@
 import { Chart } from '@antv/g2';
 
-const chart = new Chart({ container: 'container' });
+const chart = new Chart({ container: 'container', autoFit: true });
+
 chart.data([
   { genre: 'Sports', sold: 0 },
   { genre: 'Strategy', sold: 115 },
@@ -18,3 +19,5 @@ chart
   .style('draggable', true)
   .style('droppable', true)
   .style('minHeight', 50);
+
+chart.render();
